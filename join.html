@@ -2,26 +2,50 @@
 title: How to Join
 layout: html
 ---
-<h2>Criteria to join</h2>
+<h2 id="criteria">Criteria to Join</h2>
 <ul>
-<li>Insert the criteria to join the webring here.
-<li>I suggest a policy on clearly marking any NSFW content.
-<li>and having no hate speech or bigotry.
-<li>and not being advertisement-focused.
+    <li>Insert the criteria to join the webring here.</li>
+    <li>I suggest a policy on clearly marking any NSFW content.</li>
+    <li>and having no hate speech or bigotry.</li>
+    <li>and not being advertisement-focused.</li>
 </ul>
 
 <small>It is impossible to enumerate everything that is not allowed. For this reason, we (the webmasters) reserve the right to remove a site if we feel it is outside of our own personal bounds.</small>
 
-<h2>Add yourself to the members list</h2>
-<p>Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request.<br>
-Pull requests can also be used to change your existing entry or delete your entry.</p>
-
+<h2 id="join">Add yourself to the members list</h2>
+<p>
+    Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request.
+</p>
+<p>
+    Pull requests can also be used to change your existing entry or delete your entry.
+</p>
 <details>
-<summary>If you don't have a GitHub account, email the shrooms this form instead:</summary>
-
+    <summary>If you don't have a GitHub account, email the shrooms this form instead:</summary>
+    <p>
+        Put <code>abyssal.shrooms request</code> as the subject.
+    </p>
+    <p>
+        Copy and paste this form and fill it out:
+    </p>
+    <textarea name="email_form" rows="6" cols="25">
+Your (nick)name:
+Site's name:
+Site's url:
+Site description:
+Button (optional):
+Your favorite mushroom:
+    </textarea>
+    <p>
+        Send to <code>howdy [at] shroom.ink</code>. You will recieve a reply when approved.
+    </p>
 </details>
 
-<h2>Add links on your webpage</h2>
-<p>Once you're on the members list, add links on your webpage to <b>{{'/YOUR-SLUG/next'|absolute_url}}</b> and <b>{{'/YOUR-SLUG/previous'|absolute_url}}</b>, replacing <b>YOUR-SLUG</b> with the slug you chose.<br>
-Feel free to include a link to <b>{{'/'|absolute_url}}</b> as well.<br>
-Check if <a href=https://html.spec.whatwg.org/dev/sections.html#the-aside-element>the <code>&lt;aside&gt;</code> element</a> is right for you.
+<h2 id="links">Add Links / Widget</h2>
+<p>
+    Once you're on the members list, add links on your webpage to <code>{{'/YOUR-SLUG/next'|absolute_url}}</code> and <code>{{'/YOUR-SLUG/previous'|absolute_url}}</code>, replacing <code>YOUR-SLUG</code> with the slug you chose.
+</p>
+<p>
+    Feel free to include a link to <code>{{'/'|absolute_url}}</code> as well.
+</p>
+
+<iframe src={{'/widget'|absolute_url}} width="200" height="250" frameborder="0" scrolling="no"></iframe>

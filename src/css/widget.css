@@ -1,0 +1,55 @@
+
+#widget {
+    overflow: hidden;
+    position: fixed;
+    margin: auto;
+    max-width: 200px;
+    max-height: 250px;
+    width: 190px;
+    height: 240px;
+
+    text-align: center;
+    padding: 5px;
+
+    box-shadow: 0px 0px 10px 5px #DCFFDD55 inset;
+    -webkit-box-shadow: 0px 0px 10px 5px #DCFFDD55 inset;
+    -moz-box-shadow: 0px 0px 10px 5px #DCFFDD55 inset;
+
+    outline: 5px double var(--f_low);
+    outline-offset: -5px;
+}
+
+#widget .title {
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    font-size: 1.5em;
+
+    font-family: var(--font-alt);
+
+    color: var(--b_low);
+
+    line-height: 0.8;
+
+    text-shadow: 0px 0px 15px var(--f_high), 0px 0px 3px white, 0px 0px 3px white ;
+}
+#widget .name {
+    font-family: var(--font-title);
+    font-size: 1.6em;
+}
+
+#widget .links {
+    z-index: 2;
+    position: absolute;
+    top: 200px;
+    left: 20px
+}
+
+#widget a {
+    color: var(--f_high);
+    text-decoration: none;
+    font-size: 2em;
+}
+#widget a:hover { color: var(--f_low); }

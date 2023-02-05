@@ -1,0 +1,25 @@
+---
+---
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>Abyssal.Shrooms Widget</title>
+        <meta charset=utf-8>
+        <link rel=stylesheet href={{'src/css/main.css'|relative_url}}>
+    </head>
+    <body>
+        <main id="widget">
+            <img class="scared_h" src={{'src/img/dither_shroom_white.webp'|absolute_url}} alt="White dithered mushroom">
+            <div class="above">
+                <div class="title">
+                    {{site.name}}<br>webring
+                </div>
+                <div class="links">
+                    <a id="previous" target="_blank" href="{{'/members'|absolute_url}}" aria-label="Previous" title="previous">←</a>
+                    <a id="home" target="_blank" href="{{'/'|absolute_url}}" aria-label="Home" title="home">◉</a>
+                    <a id="next" target="_blank" href="{{'/members'|absolute_url}}" aria-label="Next" title="next">→</a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

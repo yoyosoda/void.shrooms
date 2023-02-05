@@ -1,0 +1,123 @@
+
+body {
+    font-family: var(--font);
+    background: var(--bg-img) var(--background) !important;
+    background-size: calc(100% / 3) !important;
+    background-attachment: fixed !important;
+    color: var(--f_high) !important;
+
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    margin: 0;
+}
+
+header h1 {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 4em;
+    margin: 5px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-alt);
+    color: var(--f_med);
+    margin-bottom: 5px;
+}
+
+nav { font-family: var(--font-alt); }
+nav ul {
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+
+    list-style: none;
+}
+
+header { grid-area: header; }
+main { grid-area: main; text-align: justify; }
+footer { grid-area: footer; text-align: right; }
+header, main, footer {
+}
+
+#page {
+    background: var(--b_low);
+
+    margin: 2em auto;
+    width: calc(60% - 2.5em);
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer";
+
+    grid-gap: 1em;
+
+    outline: 5px var(--f_med) double;
+    outline-offset: 5px;
+}
+
+a {
+    color: var(--f_low);
+}
+a:hover { color: var(--f_med); }
+
+mark, ::-moz-selection, ::selection {
+    color: var(--b_low);
+    background: var(--f_high);
+}
+
+details {
+    padding: 5px;
+    margin: 10px;
+    background: var(--background);
+
+    outline: 1px dotted var(--f_low);
+    outline-offset: 5px;
+}
+details summary {
+    cursor: pointer;
+    padding: 0px 3px;
+}
+
+code { background: var(--b_med); padding: 1px 2px; }
+
+hr {
+    border: none;
+    width: 50%;
+    border-bottom: 2px dotted var(--f_high);
+}
+
+/* *** */
+
+.name {
+    font-family: var(--font-alt);
+    text-transform: lowercase;
+    font-style: oblique;
+}
+
+.scared {
+    animation: an_shake .2s linear infinite;
+}
+.scared_h:hover {
+    animation: an_shake .2s linear infinite;
+}
+@keyframes an_shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

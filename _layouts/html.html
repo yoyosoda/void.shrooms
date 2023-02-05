@@ -5,27 +5,32 @@
     <head>
         <title>{{page.title}}</title>
         <meta charset=utf-8>
+        <script type="text/javascript" src={{'src/js/theme.js'|relative_url}}></script>
         <link rel=stylesheet href={{'src/css/main.css'|relative_url}}>
     </head>
     <body>
-        <header>
-            <h1>{{page.title}}</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/members">Memebers</a></li>
-                    <li><a href="/join">Join</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-        {{content}}
-        </main>
+        <div id="page">
+            <header>
+                <h1 class="scared_h">{{page.title}}</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        |
+                        <li><a href="/members">Memebers</a></li>
+                        |
+                        <li><a href="/join">Join</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+            {{content}}
+            </main>
+            <footer>
+                <hr>
+                <p><a href={{site.github_repo_url}}>View on GitHub</a><p>
+                <p>If the ring is broken, please <a href={{site.github_repo_url}}/issues/new>submit an error report on GitHub</a>.
+            </footer>
+        </div>
     </body>
-    <footer>
-        <nav>
-            <a href={{site.github_repo_url}}>View on GitHub</a>
-            <p>If the ring is broken, please <a href={{site.github_repo_url}}/issues/new>submit an error report on GitHub</a>.
-        </nav>
-    </footer>
+    <script type="text/javascript" src={{'src/js/start.js'|relative_url}}></script>
 </html>
