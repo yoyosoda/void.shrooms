@@ -4,7 +4,17 @@ layout: html
 ---
 
 <h2 id=members>Members ({{site.data.members.size}})</h2>
-<ul>
+<ul class="members">
 {% for member in site.data.members %}
-<li><a href="{{member.url | xml_escape}}">{{member.name | xml_escape | newline_to_br}}</a>{% endfor %}
+<li>
+    <div class="site">
+        <a class="alt_font" target="_blank" href="{{member.url | xml_escape}}">{{member.name | xml_escape}}</a>
+    </div>
+    <!--<div class="slug"><span class="fl alt_font">Slug:</span> {{member.slug | xml_escape}}</div>-->
+    <img src="{{"/src/img/buttons/"|absolute_url}}{{member.button | xml_escape}}">
+    <div class="nickname alt_font">{{member.nickname | xml_escape}}</div>
+    <div class="description">{{member.desc | xml_escape}}</div>
+    <div class="shroom"><span class="fl alt_font">Favorite fungi:</span> <br>{{member.fungi | xml_escape}}</div>
+</li>
+{% endfor %}
 </ul>

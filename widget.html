@@ -22,4 +22,19 @@
             </div>
         </main>
     </body>
+    <script src={{"/src/js/urlvalue.js"|absolute_url}} charset="utf-8"></script>
+    <script>
+        let values = urlValues();
+
+        if (values.slug != "" && values.slug != null) {
+            document.getElementById('previous').href = `https://abyssal.shroom.ink/${values.slug}/previous`;
+            document.getElementById('next').href = `https://abyssal.shroom.ink/${values.slug}/next`;
+            console.log(`Slug set to: ${values.slug}`);
+        }
+
+        if (values.hex != "" && values.hex != null) {
+            document.getElementById('widget').setAttribute('style', `outline: 5px double #${values.hex}`);
+            console.log(`Border color set to: #${values.hex}`);
+        }
+    </script>
 </html>

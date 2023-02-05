@@ -1,4 +1,8 @@
 
+@media only screen and (max-width: 800px) {
+    #page { width: calc(90% - 2.5em); }
+}
+
 body {
     font-family: var(--font);
     background: var(--bg-img) var(--background) !important;
@@ -94,12 +98,81 @@ hr {
     border-bottom: 2px dotted var(--f_high);
 }
 
+iframe {
+    display: block;
+    margin: 5px auto;
+}
+
+button {
+    background: var(--background);
+    color: var(--f_high);
+
+    padding: 5px;
+    margin: 10px;
+
+    border: none;
+    outline: 1px dotted var(--f_low);
+    outline-offset: 5px;
+}
+button:hover {
+    background: var(--f_high);
+    color: var(--background);
+    cursor: pointer;
+}
+
 /* *** */
+
+.members {
+    padding: 0;
+    list-style: none;
+}
+.members li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nick desc site"
+        "shroom desc button";
+
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 5px;
+
+    margin: 10px 5px;
+
+    padding: 5px;
+    outline: 2px dotted var(--f_med);
+}
+.members .slug { grid-area: slug; text-align: center; }
+.members .button { grid-area: button; }
+.members img { grid-area: button; margin: 5px 5px 5px auto; }
+.members .site { grid-area: site; text-align: right; }
+.members .nickname { grid-area: nick; }
+.members .description { grid-area: desc; text-align: center; }
+.members .shroom { grid-area: shroom; }
+
+.alt_font { font-family: var(--font-alt); }
 
 .name {
     font-family: var(--font-alt);
     text-transform: lowercase;
     font-style: oblique;
+}
+
+.two_grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "col1 col2";
+}
+.two_grid .col_1 { grid-area: col1; border-right: dashed 1px var(--font-color); padding: 5px 10px 5px 5px; }
+.two_grid .col_2 { grid-area: col2; padding: 5px 5px 5px 10px; }
+@media only screen and (max-width: 800px) {
+    .two_grid { grid-template-areas: "col1 col1" "col2 col2"; }
+    .two_grid .col_1 { border: none; border-bottom: dashed 1px var(--font-color); padding: 10px 5px; }
+    .two_grid .col_1 { padding: 10px 5px; }
 }
 
 .scared {

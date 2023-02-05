@@ -17,7 +17,7 @@ layout: html
     Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request.
 </p>
 <p>
-    Pull requests can also be used to change your existing entry or delete your entry.
+    Pull requests can also be used to edit your existing entry or delete your entry.
 </p>
 <details>
     <summary>If you don't have a GitHub account, email the shrooms this form instead:</summary>
@@ -33,7 +33,7 @@ Site's name:
 Site's url:
 Site description:
 Button (optional):
-Your favorite mushroom:
+Your favorite fungi or mushroom:
     </textarea>
     <p>
         Send to <code>howdy [at] shroom.ink</code>. You will recieve a reply when approved.
@@ -48,4 +48,30 @@ Your favorite mushroom:
     Feel free to include a link to <code>{{'/'|absolute_url}}</code> as well.
 </p>
 
-<iframe src={{'/widget'|absolute_url}} width="200" height="250" frameborder="0" scrolling="no"></iframe>
+<div class="two_grid">
+    <div class="col_1">
+        <p>Generate Your Widget:</p>
+        <form class="adopt">
+        <label for="siteSLUG">Your SLUG:</label>
+        <input type="text" name="siteSLUG" id="siteSLUG" value="">
+        <br><br>
+        <label for="borderCOLOR">Border color: #</label>
+        <input type="text" name="borderCOLOR" id="borderCOLOR" value=""><br>
+        <span>(Hex codes without the #. Leave blank for default color.)</span>
+        <br><br>
+        <button type="button" name="generate" id="generate">Generate</button>
+        </form>
+        <hr>
+        <p>Generated code:</p>
+        <textarea id="generated" name="generated" rows="3" cols="40">&#60;iframe src="{{'/widget'|absolute_url}}" height="250px" width="200px" scrolling="no" frameborder="0"&#62;&#60;/iframe&#62;</textarea>
+    </div>
+
+
+    <div class="col_2">
+        <p>Preview:</p>
+        <p>Note that this widget uses Javascript.</p>
+        <iframe id="preview" src={{'/widget'|absolute_url}} width="200" height="250" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+
+<script src={{'/src/js/widgets.js'|absolute_url}} charset="utf-8"></script>
