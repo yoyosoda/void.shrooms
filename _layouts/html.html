@@ -1,0 +1,21 @@
+---
+---
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>{{page.title}}</title>
+        <meta charset=utf-8>
+        <link rel=stylesheet href={{'src/main.css'|relative_url}}>
+    </head>
+    <body>
+        <main>
+        {{content}}
+        </main>
+    </body>
+    <footer>
+        <nav>
+            <a href={{'/'|relative_url}}>Index</a><br>
+            <a href={{site.github_repo_url}}>View on GitHub</a>
+        </nav>
+    </footer>
+</html>
