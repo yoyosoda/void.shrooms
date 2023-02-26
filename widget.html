@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang=en>
     <head>
-        <title>Abyssal.Shrooms Widget</title>
+        <title>void.Shrooms Widget</title>
         <meta charset=utf-8>
         <link rel=stylesheet href={{'src/css/main.css'|relative_url}}>
     </head>
@@ -27,8 +27,8 @@
         let values = urlValues();
 
         if (values.slug != "" && values.slug != null) {
-            document.getElementById('previous').href = `https://abyssal.shroom.ink/${values.slug}/previous`;
-            document.getElementById('next').href = `https://abyssal.shroom.ink/${values.slug}/next`;
+            document.getElementById('previous').href = `https://void.shroom.ink/${values.slug}/previous`;
+            document.getElementById('next').href = `https://void.shroom.ink/${values.slug}/next`;
             console.log(`Slug set to: ${values.slug}`);
         }
 
