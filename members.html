@@ -10,8 +10,11 @@ layout: html
     <div class="site">
         <a class="alt_font" target="_blank" href="{{member.url | xml_escape}}">{{member.name | xml_escape}}</a>
     </div>
-    <!--<div class="slug"><span class="fl alt_font">Slug:</span> {{member.slug | xml_escape}}</div>-->
-    <img src="{{"/src/img/buttons/"|absolute_url}}{{member.button | xml_escape}}">
+    {% assign button = "None.jpg" %}
+    {% unless member.button == Null %}
+        {% assign button = member.button %}
+    {% endunless %}
+    <img src="{{"/src/img/buttons/"|absolute_url}}{{button}}">
     <div class="nickname alt_font">{{member.nickname | xml_escape}}</div>
     <div class="description">{{member.desc | xml_escape}}</div>
     <div class="shroom"><span class="fl alt_font">Favorite fungi:</span> <br>{{member.fungi | xml_escape}}</div>

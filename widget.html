@@ -34,6 +34,7 @@
 
         if (values.hex != "" && values.hex != null) {
             document.getElementById('widget').setAttribute('style', `outline: 5px double #${values.hex}`);
+            document.querySelector(':root').style.setProperty("--f_low", `#${values.hex}`);
             console.log(`Border color set to: #${values.hex}`);
         }
     </script>

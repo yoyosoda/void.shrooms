@@ -1,6 +1,6 @@
 
 @media only screen and (max-width: 800px) {
-    #page { width: calc(90% - 2.5em); }
+    #page { width: calc(90% - 2.5em) !important; }
 }
 
 body {
@@ -15,6 +15,9 @@ body {
     image-rendering: crisp-edges;
 
     margin: 0;
+
+    line-height: 1.4;
+    font-size: calc(1rem + .05vw);
 }
 
 header h1 {
@@ -44,8 +47,14 @@ nav ul {
 }
 
 header { grid-area: header; }
-main { grid-area: main; text-align: justify; }
+main { grid-area: main; }
 footer { grid-area: footer; text-align: right; }
+.footer {
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+.buttonV { align-self: center; }
+
 header, main, footer {
 }
 
@@ -120,6 +129,9 @@ button:hover {
     cursor: pointer;
 }
 
+ul { list-style-type: '🍄 '; }
+ol { list-style-type: lower-roman; }
+
 /* *** */
 
 .members {
@@ -169,7 +181,7 @@ button:hover {
 }
 .two_grid .col_1 { grid-area: col1; border-right: dashed 1px var(--font-color); padding: 5px 10px 5px 5px; }
 .two_grid .col_2 { grid-area: col2; padding: 5px 5px 5px 10px; }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .two_grid { grid-template-areas: "col1 col1" "col2 col2"; }
     .two_grid .col_1 { border: none; border-bottom: dashed 1px var(--font-color); padding: 10px 5px; }
     .two_grid .col_1 { padding: 10px 5px; }

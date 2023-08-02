@@ -4,17 +4,18 @@ layout: html
 ---
 <h2 id="criteria">Criteria to Join</h2>
 <ul>
-    <li>Insert the criteria to join the webring here.</li>
-    <li>NSFW and/or lewd content is allowed if marked as such.</li>
+    <li>You <b>must</b> like fungi in some form or fasion.</li>
+    <li>NSFW and/or suggestive content is allowed if marked as such.</li>
+    <li>You <b>must</b> be 18 or older. (Why? Look a the above.)</li>
     <li>There will be no tolarance for hate <a target="_blank" href="https://deadinsideartist.art/ethical">speech or bigotry</a>.</li>
-    <li>and not being advertisement-focused.</li>
+    <li>A darker aesthetics is not required but appreciated.</li>
 </ul>
 
-<small>It is impossible to enumerate everything that is not allowed. For this reason, we (the webmasters) reserve the right to remove a site if we feel it is outside of our own personal bounds.</small>
+<p>I, the webmaster, reserve the right to remove a site if I feel it is outside the webring's vision.</p>
 
 <h2 id="join">Add yourself to the members list</h2>
 <p>
-    Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request.
+    Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list</a> and your button (if you have one) to <a href="{{site.github_repo_url}}/blob/main/src/img/buttons">the button folder</a> on GitHub in a pull request.
 </p>
 <p>
     Pull requests can also be used to edit your existing entry or delete your entry.
@@ -42,11 +43,13 @@ Your favorite fungi or mushroom:
 
 <h2 id="links">Add Links / Widget</h2>
 <p>
-    Once you're on the members list, add links on your webpage to <code>{{'/YOUR-SLUG/next'|absolute_url}}</code> and <code>{{'/YOUR-SLUG/previous'|absolute_url}}</code>, replacing <code>YOUR-SLUG</code> with the slug you chose.
+    Once you're on the members list, add your links to your website. You can do this yourself or you can generate a widget to add to your site instead.
 </p>
 <p>
-    Feel free to include a link to <code>{{'/'|absolute_url}}</code> as well.
+    Your links will follow this format: <code>{{'/YOUR-SLUG/next'|absolute_url}}</code> and <code>{{'/YOUR-SLUG/previous'|absolute_url}}</code>. Replace <code>YOUR-SLUG</code> with the slug you chose. Feel free to include a link to <code>{{'/'|absolute_url}}</code> as well.
 </p>
+
+<h3>Widget #1</h3>
 
 <div class="two_grid">
     <div class="col_1">
@@ -69,8 +72,68 @@ Your favorite fungi or mushroom:
 
     <div class="col_2">
         <p>Preview:</p>
-        <p>Note that this widget requires Javascript.</p>
+        <p>This widget requires Javascript.</p>
         <iframe id="preview" src={{'/widget'|absolute_url}} width="200" height="250" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+
+<h3>Widget #2</h3>
+
+<div class="two_grid">
+    <div class="col_1">
+        <p>Generate Your Widget:</p>
+        <form class="adopt">
+        <label for="siteSLUG2">Your SLUG:</label>
+        <input type="text" name="siteSLUG2" id="siteSLUG2" value="">
+        <br><br>
+        <label for="borderCOLOR2">Border color: #</label>
+        <input type="text" name="borderCOLOR2" id="borderCOLOR2" value=""><br>
+        <span>(Hex codes without the #. Leave blank for default color.)</span>
+        <br><br>
+        <label for="textCOLOR2">Text color: #</label>
+        <input type="text" name="textCOLOR2" id="textCOLOR2" value=""><br>
+        <span>(Hex codes without the #. Leave blank for default color.)</span>
+        <br><br>
+        <button type="button" name="generate2" id="generate2">Generate</button>
+        </form>
+    </div>
+    <div class="col_2">
+        <p>Preview:</p>
+        <p>No Javascript Required.</p>
+
+        <div id="preview2">
+            <div id="voidShrooms">
+                <style>
+                    #voidShrooms {
+                        width: 200px;
+                        height: 50px;
+                        background: url('https://void.shrooms.ink/src/img/background.webp') #171717;
+                        font-family: monospace;
+                        outline: 5px double #ba4583;
+                        outline-offset: -5px;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        margin: .5em;
+                    }
+                    #voidShrooms a {
+                        color: #efefef;
+                        text-decoration: none;
+                        font-size: 2.2em;
+                        text-align: center;
+                        align-self: center;
+                    }
+                    #voidShrooms #home { font-size: 1em; color: #33FF00; }
+                </style>
+                <a id="previous" target="_blank" href="html://void.shroom.ink/members/" aria-label="Previous" title="previous">←</a>
+                <a id="home" target="_blank" href="html://void.shroom.ink/" aria-label="Home" title="home">void.shrooms</a>
+                <a id="next" target="_blank" href="html://void.shroom.ink/members/" aria-label="Next" title="next">→</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <p>Generated code:</p>
+        <textarea id="generated2" name="generated2" rows="3" cols="40"><div id=voidShrooms><style>#voidShrooms{width:200px;height:50px;background:url(https://void.shrooms.ink/src/img/background.webp) #171717;font-family:monospace;outline:5px double #ba4583;outline-offset:-5px;display:grid;grid-template-columns:1fr 1fr 1fr;margin:.5em}#voidShrooms a{color:#efefef;text-decoration:none;font-size:2.2em;text-align:center;align-self:center}#voidShrooms #home{font-size:1em;color:#3F0}</style><a aria-label=Previous href=html://void.shroom.ink/members/ id=previous target=_blank title=previous>←</a> <a aria-label=Home href=html://void.shroom.ink/ id=home target=_blank title=home>void.shrooms</a> <a aria-label=Next href=html://void.shroom.ink/members/ id=next target=_blank title=next>→</a></div></textarea>
     </div>
 </div>
 
