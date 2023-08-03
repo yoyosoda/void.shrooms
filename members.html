@@ -7,8 +7,12 @@ layout: html
 <ul class="members">
 {% for member in site.data.members %}
 <li>
+    {% assign nsfw = "" %}
+    {% if member.nsfw == "y" %}
+        {% assign nsfw = "🔞 " %}
+    {% endif %}
     <div class="site">
-        <a class="alt_font" target="_blank" href="{{member.url | xml_escape}}">{{member.name | xml_escape}}</a>
+        {{nsfw}}<a class="alt_font" target="_blank" href="{{member.url | xml_escape}}">{{member.name | xml_escape}}</a>
     </div>
     {% assign button = "None.jpg" %}
     {% unless member.button == Null %}
@@ -21,3 +25,5 @@ layout: html
 </li>
 {% endfor %}
 </ul>
+
+<a href="https://shroom.ink/decay/adopt-a-shroom/" target="_blank"><img class="centerImg" src="https://shroom.ink/images/adoptables/Xylaria_hypoxylon.png" alt="An xylaria hypoxylon." title="Xylaria hypoxylon"></a>

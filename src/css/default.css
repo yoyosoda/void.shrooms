@@ -132,6 +132,22 @@ button:hover {
 ul { list-style-type: '🍄 '; }
 ol { list-style-type: lower-roman; }
 
+table {
+    border: solid var(--f_high) 1px;
+    width: 100%;
+    text-align: center;
+    word-break: break-all;
+}
+th { border-bottom: dotted var(--f_high) 1px; }
+td { border-left: dashed var(--f_high) 1px; border-bottom: dashed var(--f_high) 1px; }
+
+/* *** */
+.centerImg {
+    display: block;
+    margin: 5px auto;
+    height: 200px;
+}
+
 /* *** */
 
 .members {
