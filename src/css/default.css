@@ -99,7 +99,8 @@ details summary {
     padding: 0px 3px;
 }
 
-code { background: var(--b_med); padding: 1px 2px; }
+code { background: var(--background); padding: 1px 2px; }
+details code { background: var(--b_low); padding: 1px 2px; }
 
 hr {
     border: none;
@@ -142,12 +143,52 @@ th { border-bottom: dotted var(--f_high) 1px; }
 td { border-left: dashed var(--f_high) 1px; border-bottom: dashed var(--f_high) 1px; }
 
 /* *** */
+.center { text-align: center; }
+
 .centerImg {
     display: block;
     margin: 5px auto;
     height: 200px;
 }
 
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto auto auto auto auto;
+
+    align-items: center;
+    justify-content: center;
+
+    grid-gap: 5px;
+}
+.button {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+}
+.button img, .buttons img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+.button a, .buttons a {
+    display: block;
+    margin: auto;
+}
+.buttonBig img {
+    width: calc(81px * 1.5);
+}
+@media only screen and (max-width: 800px) {
+  .buttons {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+  }
+}
 /* *** */
 
 .members {
