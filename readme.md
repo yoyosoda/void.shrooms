@@ -7,7 +7,7 @@ Void.Shrooms is a [webring](https://en.wikipedia.org/wiki/Webring) for creatives
 This site uses [Hundredrabbits' Themes](https://github.com/hundredrabbits/Themes) and [mincerafter42's webring set up](https://mincerafter42.github.io/tutorial/webring/).
 
 
-## Running it
+## Running It Locally
 
 bundle exec jekyll serve
 
